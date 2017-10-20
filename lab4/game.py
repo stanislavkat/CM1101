@@ -154,10 +154,9 @@ def is_valid_exit(exits, user_input):
     >>> is_valid_exit(rooms["Parking"]["exits"], "east")
     True
     """
-    if user_input in exits:
-            return True
-    else:
-            return False
+   
+    return user_input in exits
+ 
 
 
 def menu(exits):
@@ -201,6 +200,7 @@ def move(exits, direction):
 
 # This is the entry point of our program
 def main():
+    global current_room
     # Start game at the reception
     current_room = rooms["Reception"]
 
